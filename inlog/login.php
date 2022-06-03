@@ -1,14 +1,5 @@
 <?php
-session_start();
-var_dump($_SESSION['check']);
-$checker = $_SESSION["check"];
 
-
-  if($checker == true){
-  $message = "account is aangemaakt";
-echo "<script type='text/javascript'>alert('$message');</script>";
-echo "<script>console.log('test')</script>";
-}
 ?>
 
 
@@ -25,10 +16,14 @@ echo "<script>console.log('test')</script>";
 </head>
 <body>
     <form action="../inlog/checker.php" method="post">
-<input type="text" placeholder="postcode" required>
+<input type="text" placeholder="Naam" required name="naam">
+<input type="password" placeholder="Wachtwoord" required name="wachtwoord">
 
 
 <input type="submit" value="verder">
     </form>
+    
+<a href="../create/account.php">heb je nog geen account?</a>
+
 </body>
 </html>

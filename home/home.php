@@ -1,7 +1,7 @@
 <?php
 include "../database.php";
 
-
+session_start();
 ?>
 
 
@@ -19,10 +19,11 @@ include "../database.php";
 
 <div class="profiel">
 
-<h4>Voornaam Achternaam</h4>
-<p>geboortedatum <br>
-postcode <br>
-straatnaam
+<?php echo "<p>" . $_SESSION['naam'] ." ". $_SESSION['achternaam'] . "<br>"; ?>
+<?php echo "<p>" . $_SESSION['geboortedatum'] . "<br>"; ?>
+<?php echo "<p>" . $_SESSION['postcode'] . "<br>"; ?>
+<?php echo "<p>" . $_SESSION['straat'] . "<br>" . "</p>"; ?>
+
 </p>
 
 </div>

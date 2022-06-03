@@ -7,8 +7,9 @@ $last_name = $_POST['achternaam'];
 $date = $_POST['date'];
 $postcode = $_POST['postcode'];
 $straat = $_POST['straat'];
+$ww = $_POST['wachtwoord'];
 
-
+$wachtwoord = password_hash($ww, PASSWORD_DEFAULT);
 
 
 $data = [
@@ -16,20 +17,19 @@ $data = [
     'last_name' => $last_name,
     'date' => $date,
     'postcode' => $postcode,
-    'straat' => $straat
+    'straat' => $straat,
+    'wachtwoord' => $wachtwoord
   ];
 
-$sql = 'INSERT INTO account(Naam_account, Achternaam_acount, Geboortedatum_account, Postcode_account, Straat_account 	) VALUES(:naam, :last_name, :date, :postcode, :straat) ';
+$sql = 'INSERT INTO account(Naam_account, Achternaam_acount, Geboortedatum_account, Postcode_account, Straat_account, Wachtwoord_account	) VALUES(:naam, :last_name, :date, :postcode, :straat, :wachtwoord) ';
 $stmt = $connection->prepare($sql);
 $stmt->execute($data); 
 $F = $stmt->fetch();
 $D = true;
 $_SESSION["check"] = $D;
 
-if($stmt->rowCount() != 0){ 
- header('location: ../inlog/login.php');} 
- else{
-    header('location: ../create/account.php'); 
- }
+
+ header('location: ../inlog/login.php');
+ 
 
 ?>
