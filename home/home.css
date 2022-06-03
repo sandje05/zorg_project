@@ -34,7 +34,7 @@ border-color:  #FFA500;}
   border-style: dotted;
   border-color:  #3fa6e6;
   background-color: white;
-  transition: 1s;
+  transition: 0.2s;
 }
 
 .vrijwilliger input {
@@ -50,7 +50,7 @@ border-color:  #FFA500;}
   border-style: dotted;
   border-color:  #7dcc7e;
   background-color: white;
-  transition: 1s ease-in;
+  transition: 0.2s ease-in;
   
 }
 
@@ -58,7 +58,7 @@ border-color:  #FFA500;}
    background-color: #90EE91;
    border-color: #70be71;
    border-style: solid;
-   transition: 1s ease-out;
+   transition: 0.2s ease-out;
    cursor: pointer;
   }
 
@@ -66,7 +66,7 @@ border-color:  #FFA500;}
     background-color: #45B6fe;
     border-color: #3181b3;
     border-style: solid;
-    transition: 1s ease-out;
+    transition: 0.2s ease-out;
     cursor: pointer;
    }
  
