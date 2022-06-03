@@ -1,0 +1,72 @@
+body {
+margin: 0;
+padding: 0;
+
+}
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.profiel {
+    text-align: center;
+    margin-bottom: 89%;
+    margin-right: 1%;
+    width: 220px;
+    height: 150px;
+    padding: 3px;
+    float: right;
+    margin-top: 1%;
+    
+}
+.profiel {border-style: double;
+border-color:  #FFA500;}
+
+.buur input {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    padding: 3px;
+    top: 50%;
+  left: 50%;
+    -ms-transform: translate(-0%, -50%);
+  transform: translate( 0%, -50%);
+  border-style: dotted;
+  border-color:  #3fa6e6;
+  background-color: white;
+  transition: 1s;
+}
+
+.vrijwilliger input {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    padding: 3px;
+    top: 50%;
+  left: 50%;
+    -ms-transform: translate(-150%, -50%);
+  transform: translate(-150%, -50%);
+  border-style: dotted;
+  border-color:  #7dcc7e;
+  background-color: white;
+  transition: 1s ease-in;
+  
+}
+
+.vrijwilliger input:hover{
+   background-color: #90EE91;
+   border-color: #70be71;
+   border-style: solid;
+   transition: 1s ease-out;
+   cursor: pointer;
+  }
+
+  .buur input:hover{
+    background-color: #45B6fe;
+    border-color: #3181b3;
+    border-style: solid;
+    transition: 1s ease-out;
+    cursor: pointer;
+   }
+ 
