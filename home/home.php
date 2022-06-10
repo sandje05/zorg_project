@@ -8,7 +8,7 @@ $verzoek = $_POST["id_v"];
 
 
 $sl = 'SELECT * FROM verzoek WHERE ID_verzoek=?';
-$stm = $connection->prepare($sl);
+$stm = $connection->prepare($sl);g
 $stm->execute([$verzoek]);
 $d = $stm->fetch();
 ?> <html>
