@@ -2,29 +2,38 @@
 include "../database.php";
 
 session_start();
+$check = false;
+if($_SERVER['HTTP_REFERER'] == "http://localhost/zorg/zorg_project/zoek/vrijwilliger.php")
+{$check = true;}
+if($_SERVER['HTTP_REFERER'] == "http://localhost/zorg/zorg_project/zoek/buur.php")
+{$check = true;}
+
+
+if($check == true)
+{
 
 $verzoek = $_POST["id_v"];
 
 
 
 $sl = 'SELECT * FROM verzoek WHERE ID_verzoek=?';
-$stm = $connection->prepare($sl);g
+$stm = $connection->prepare($sl);
 $stm->execute([$verzoek]);
-$d = $stm->fetch();
+$r = $stm->fetch();
 ?> <html>
     <div class="profiel">
-<p> <?php echo 
+<p> <?php echo $r['Activiteit_verzoek'] . $r['Tijd_verzoek'];?>
 
     </div>
 </html>
-
+<?php
 $sql = "DELETE FROM verzoek WHERE ID_verzoek=?";
 $stmt= $connection->prepare($sql);
 $stmt->execute([$verzoek]);
 
 
 
-
+}
 
 ?>
 
