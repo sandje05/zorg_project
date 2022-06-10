@@ -61,9 +61,7 @@ $stmt->execute([$verzoek]);
 
 </div>
 
-    <form action="../instellingen/instellingen.php" method="post">
-    <input type="submit" value="instellingen">
-</form>
+   
 <div class="vrijwilliger">
 <form action="../zoek/vrijwilliger.php" method="post">
     <input type="submit" value="zoek een vrijwilliger">
