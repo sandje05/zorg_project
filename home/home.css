@@ -69,4 +69,27 @@ border-color:  #FFA500;}
     transition: 0.2s ease-out;
     cursor: pointer;
    }
- 
+   a.button1{
+    position: absolute;
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #e0242f;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#2b2b2b;
+    text-align:center;
+    transition: all 0.2s;
+    width: 300px;
+    height: 40px;
+    border-style: dashed;
+    -ms-transform: translate( 100%, -50%);
+  transform: translate( 750px, 580px);
+    }
+    a.button1:hover{
+  color:#000000;
+    background-color:#e65962;
+    }
+    

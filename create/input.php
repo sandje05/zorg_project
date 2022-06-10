@@ -21,7 +21,7 @@ $data = [
     'wachtwoord' => $wachtwoord
   ];
 
-$sql = 'INSERT INTO account(Naam_account, Achternaam_acount, Geboortedatum_account, Postcode_account, Straat_account, Wachtwoord_account	) VALUES(:naam, :last_name, :date, :postcode, :straat, :wachtwoord) ';
+$sql = 'INSERT INTO account(Naam_account, Achternaam_account, Geboortedatum_account, Postcode_account, Straat_account, Wachtwoord_account	) VALUES(:naam, :last_name, :date, :postcode, :straat, :wachtwoord) ';
 $stmt = $connection->prepare($sql);
 $stmt->execute($data); 
 $F = $stmt->fetch();

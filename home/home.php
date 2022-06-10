@@ -2,6 +2,30 @@
 include "../database.php";
 
 session_start();
+
+$verzoek = $_POST["id_v"];
+
+
+
+$sl = 'SELECT * FROM verzoek WHERE ID_verzoek=?';
+$stm = $connection->prepare($sl);
+$stm->execute([$verzoek]);
+$d = $stm->fetch();
+?> <html>
+    <div class="profiel">
+<p> <?php echo 
+
+    </div>
+</html>
+
+$sql = "DELETE FROM verzoek WHERE ID_verzoek=?";
+$stmt= $connection->prepare($sql);
+$stmt->execute([$verzoek]);
+
+
+
+
+
 ?>
 
 
@@ -39,5 +63,7 @@ session_start();
 <form action="../zoek/buur.php" method="post">
     <input type="submit" value="zoek een buur">
 </form> </div>
+
+<a href="../verzoek/verzoek.php" class="button1">verzoek</a>
 </body>
 </html>
